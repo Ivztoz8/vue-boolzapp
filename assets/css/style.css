@@ -1,5 +1,32 @@
 .my_profile{
-    display: flex;
     width: 60px;
 
+}
+
+.my_bg_gr4y{
+    background-color: lightgray;
+}
+
+.my_bg_4zur{
+    background-color: #91D4FF;
+}
+
+.my_cl_4zur{
+    color:  #91D4FF;;
+}
+
+.my_cl_gr4y{
+    color: lightgray;
+}
+
+.my_f0ntS1{
+    font-size: 0.9em;
+}
+
+.my_f0ntS2{
+    font-size: 1.3em;
+}
+
+a{
+    text-decoration: none;
 }

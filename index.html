@@ -13,24 +13,94 @@
 <body>
     <div id="root">
       <div class="sfondo">
-        <div class="container d-flex justify-content-center align-items-center">
-            <div class="row">
+        <div class="container border d-flex justify-content-center flex-column">
+            <div class="row-12">
                 <!-- Colonna di sinistra -->
-                <div class="col-4"></div>
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img src="./assets/img/avatar_io.jpg" alt="profilo" class="rounded-circle my_profile me-3 ">
-                            <span>Nome e cognome</span>
+                <!-- User -->
+                <div class="col-4">
+                    <div class="row my_bg_gr4y p-2">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/img/avatar_io.jpg" alt="profilo" class="rounded-circle my_profile me-3 ">
+                               <div>
+                                <span>Nome e cognome</span>
+                               </div>
+                            </div>
+                            <div class="text-secondary align-items-end">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
-                        <div>
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-
                     </div>
-                <div class="col-8"></div>
+                    <div class="row my_bg_4zur"> 
+                        <div class="col p-4">
+                           <div class="row d-flex">
+                               <div class="col-2 text-center">
+                                <div class="bg-light my_cl_4zur rounded-circle py-3">
+                                    <i class="fa-solid fa-bell-slash my_f0ntS2"></i>
+                                </div> 
+                               </div>
+                               <div class="col-10">
+                                <span class=""> Ricevi notifiche di nuovi messaggi</span>
+                                <div>
+                                 <a href="#" class="text-decoration-underline text-secondary my_f0ntS1"> Attiva notifiche desktop</a>
+                                </div>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center align-items-center my_bg_gr4y"> 
+                       <div class="input-group input-group-sm p-2">
+                            <span class="input-group-text bg-light px-3" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass my_cl_gr4y"></i></span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" v-model="">
+                        </div>                         
+                    </div>
+                    <div class="row justify-content-center align-items-center flex-column"> 
+                        <div class="col p-3">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="./assets/img/avatar_1.jpg" class="my_profile rounded-circle" alt="Chat 1">
+                                </div>
+                                <div class="col-8">
+                                    <span>Michele</span>
+                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
+                                </div>
+                                <div class="col-2">
+
+                                </div>
+                            </div>
+                           
+                          
+                        </div>
+                        <div class="col">
+                            <img src="./assets/img/avatar_2.jpg" class="my_profile rounded-circle" alt="Chat 2">
+                        </div>
+                        <div class="col">
+                            <img src="./assets/img/avatar_3.jpg" class="my_profile rounded-circle" alt="Chat 3">
+                        </div>
+                        <div class="col">
+                            <img src="./assets/img/avatar_4.jpg" class="my_profile rounded-circle" alt="Chat 4">
+                        </div>
+                        <div class="col">
+                            <img src="./assets/img/avatar_5.jpg" class="my_profile rounded-circle" alt="Chat 5">
+                        </div>
+                        <div class="col">
+                            <img src="./assets/img/avatar_6.jpg" class="my_profile rounded-circle" alt="Chat 6">
+                        </div>
+                        <div class="col">
+                            <img src="./assets/img/avatar_7.jpg" class="my_profile rounded-circle" alt="Chat 7">
+                        </div>
+                        <div class="col">
+                            <img src="./assets/img/avatar_8.jpg" class="my_profile rounded-circle" alt="Chat 8">
+                        </div>    
+                     </div>                 
+                <div class="col-8">
+
+                </div>
             </div>
+            <!-- Notifiche -->
+            
         </div>
       </div>
     </div>
