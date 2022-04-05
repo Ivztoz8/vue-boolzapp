@@ -13,32 +13,31 @@
 <body>
     <div id="root">
       <div class="sfondo">
-        <div class="contlinegreencolored">
-        <div class="container d-flex justify-content-center flex-column pt-2">
+        <div class="d-felx container justify-content-center flex-column pt-2">
             <div class="row">
                 <!-- Colonna di sinistra -->
                 <!-- User -->
                 <div class="col-4">
                     <div class="row my_bg_gr4y p-2">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="./assets/img/avatar_io.jpg" alt="profilo" class="rounded-circle my_profile me-3 ">
+                        <div class="d-flex justify-content-between"  v-for="io in user">
+                            <div class="d-flex align-items-center" >
+                                <img :src="`./assets/img/avatar${io.avatar}.jpg`" alt="profilo" class="rounded-circle my_profile me-3 ">
                                <div>
-                                <span>Sofia</span>
+                                <span>{{io.name}}</span>
                                </div>
                             </div>
                             <div class="my_cl_gr4y_2 align-self-center fs-5">
-                                <i class="fa-solid fa-circle-notch"></i>
-                                <i class="fa-solid fa-message"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                <i class="fa-solid fa-circle-notch me-2" role="button"></i>
+                                <i class="fa-solid fa-message me-2" role="button"></i>
+                                <i class="fa-solid fa-ellipsis-vertical me-2" role="button"></i>
                             </div>
                         </div>
                     </div>
                     <div class="row my_bg_4zur"> 
-                        <div class="col p-4">
+                        <div class="col py-3 px-4">
                            <div class="row d-flex">
                                <div class="col-2 text-center">
-                                <div class="bg-light my_cl_4zur rounded-circle py-3 px-2">
+                                <div class="bg-light my_cl_4zur rounded-circle py-2 px-2" role="button">
                                     <i class="fa-solid fa-bell-slash my_f0ntS2"></i>
                                 </div> 
                                </div>
@@ -53,151 +52,70 @@
                     </div>
                     <div class="row justify-content-center align-items-center my_bg_gr4y"> 
                        <div class="input-group input-group-sm p-2">
-                            <span class="input-group-text bg-light px-3 border-0"" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass my_cl_gr4y bg-light"></i></span>
+                            <span class="input-group-text bg-light px-3 border-0" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass my_cl_gr4y bg-light" role="button"></i></span>
                             <input type="text" class="form-control border-0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
                         </div>                         
                     </div>
                     <!-- Notifiche -->
-                    <div class="row justify-content-center align-items-center flex-column "> 
-                        <div class="col p-3">
-                            <div class="row py-2">
-                                <div class="col-2">
-                                    <img src="./assets/img/avatar_1.jpg" class="my_profile rounded-circle" alt="Chat 1">
-                                </div>
-                                <div class="col-8">
-                                    <span>Michele</span>
-                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="text-secondary my_f0ntS1">12:00</div>
-                                </div>
-                            </div>
-                            <div class="row py-2">
-                                <div class="col-2">
-                                    <img src="./assets/img/avatar_2.jpg" class="my_profile rounded-circle" alt="Chat 1">
-                                </div>
-                                <div class="col-8">
-                                    <span>Fabio</span>
-                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="text-secondary my_f0ntS1">12:00</div>
-                                </div>
-                            </div>
-                            <div class="row py-2">
-                                <div class="col-2">
-                                    <img src="./assets/img/avatar_3.jpg" class="my_profile rounded-circle" alt="Chat 1">
-                                </div>
-                                <div class="col-8">
-                                    <span>Samuele</span>
-                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="text-secondary my_f0ntS1">12:00</div>
-                                </div>
-                            </div>
-                            <div class="row py-2">
-                                <div class="col-2">
-                                    <img src="./assets/img/avatar_4.jpg" class="my_profile rounded-circle" alt="Chat 1">
-                                </div>
-                                <div class="col-8">
-                                    <span>Alessandro B.</span>
-                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="text-secondary my_f0ntS1">12:00</div>
-                                </div>
-                            </div>
-                            <div class="row py-2">
-                                <div class="col-2">
-                                    <img src="./assets/img/avatar_5.jpg" class="my_profile rounded-circle" alt="Chat 1">
-                                </div>
-                                <div class="col-8">
-                                    <span>Alessandro L.</span>
-                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="text-secondary my_f0ntS1">12:00</div>
-                                </div>
-                            </div>
-                            <div class="row py-2">
-                                <div class="col-2">
-                                    <img src="./assets/img/avatar_6.jpg" class="my_profile rounded-circle" alt="Chat 1">
-                                </div>
-                                <div class="col-8">
-                                    <span>Claudia</span>
-                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="text-secondary my_f0ntS1">12:00</div>
-                                </div>
-                            </div>
-                            <div class="row py-2">
-                                <div class="col-2">
-                                    <img src="./assets/img/avatar_7.jpg" class="my_profile rounded-circle" alt="Chat 1">
-                                </div>
-                                <div class="col-8">
-                                    <span>Federico</span>
-                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="text-secondary my_f0ntS1">12:00</div>
-                                </div>
-                            </div>
-                            <div class="row py-2">
-                                <div class="col-2">
-                                    <img src="./assets/img/avatar_8.jpg" class="my_profile rounded-circle" alt="Chat 1">
-                                </div>
-                                <div class="col-8">
-                                    <span>Davide</span>
-                                    <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="text-secondary my_f0ntS1">12:00</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row border"> 
+                            <ul class=" col ">
+                                <li class="row py-2 border-bottom bg-light " v-for=" (contact, index) in contacts" role="button" @click="changeContactsIndex(index)">
+                                    <div class="col-2 ">
+                                        <img :src="`./assets/img/avatar${contact.avatar}.jpg`" class="my_profile rounded-circle" alt="`Chat person ${contacts.avatar}`"></div>    
+                                    <div class="col-7">
+                                        <span>{{contact.name}}</span>
+                                        <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="text-secondary my_f0ntS1">{{contact.messages[0].date}}</div>
+                                    </div>
+                                </li>
+                            </ul>
                      </div>                 
                 </div>
                 <!-- Chats -->
                 <div class="col-8">
                     <div class="row py-2 my_bg_gr4y border-start border-secondary justify-content-between">
-                        <div class="col-1">
-                            <img src="./assets/img/avatar_1.jpg" class="my_profile rounded-circle" alt="Chat 1">
+                        <div class="col-1" @click="changeContactsIndex(index)">
+                            <img :src="( chatPerson == 'false' ) ? `./assets/img/avatar${contacts[0].avatar}.jpg` : `./assets/img/avatar_${indexChanged2}.jpg` " class="my_profile rounded-circle" alt="">
                             </div>
                         <div class="col-8 align-self-center">
-                            <span>Michele</span>
-                            <div class="text-secondary my_f0ntS1">Ultimo messaggio inviato</div>
+                            <div>{{contacts[indexChanged].name}}</div>
+                            <span class="text-secondary my_f0ntS1">Ultimo messaggio inviato da </span>
+                            <span class="text-secondary my_f0ntS1">{{contacts[indexChanged].name}}</span>
+                            <span class="text-secondary my_f0ntS1"> alle {{contacts[indexChanged3].messages[indexChanged3].date}}</span>
                         </div>
                         <div class="d-flex col-2 justify-content-end me-2">
                             <div class="my_cl_gr4y_2 my_f0ntS1 fs-4 align-self-center ">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <i class="fa-solid fa-paperclip"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                <i class="fa-solid fa-magnifying-glass me-2" role="button"></i>
+                                <i class="fa-solid fa-paperclip me-2" role="button"></i>
+                                <i class="fa-solid fa-ellipsis-vertical me-2" role="button"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex row py-2 my_bg_w4llp1 border-start border-secondary p-2">
-                        <div class="d-flex col align-items-end my_c0ntainer">
-                        
-                        </div>
+                    <!-- message chat -->
+                    <div class="my_bg_w4llp1 row border-start border-secondary p-3">
+                     <ul class="d-flex list-group list-group-flush flex-column"> 
+                         <li class="list-group-item rounded-3 mb-3" v-for="(element, index) in contacts[indexChanged].messages" :class="(element.status == 'sent') ? 'align-self-end sent' : 'align-self-start recived'">{{element.message}}</li>
+                         <li class="list-group-item rounded-3 mb-3" :class="(msgStatusInput == 'false') ? 'd-none' : 'align-self-end sent'">{{outputMs}}</li>
+                         <li class="list-group-item rounded-3 mb-3 d-none align-self-start recived" id="reply">{{chatbotReply}}</li>
+                        </ul>
                     </div>
                     <div class="d-flex row my_bg_gr4y border-start border-secondary py-4">
                         <div class="col-1 ps-5 justify-content-center align-self-center ">
-                            <i class="fa-regular my_cl_gr4y_3 fa-face-smile fs-3"></i>
+                            <i class="fa-regular my_cl_gr4y_3 fa-face-smile fs-3" role="button"></i>
                         </div>
                         <div class="col-10">
                             <div class="input-group lg-3 ms-4">
-                                <input type="text" class="form-control py-3" aria-label="Sizing example input" placeholder="Scrivi un messaggio" aria-describedby="inputGroup-sizing-default">
+                                <input type="text" class="form-control py-3" aria-label="Sizing example input" placeholder="Scrivi un messaggio" aria-describedby="inputGroup-sizing-default" v-model="inputMs" v-on:keyup.enter="inputMsg">
                             </div>
                         </div>
                         <div class="col-1 ps-4 justify-content-center align-self-center">
-                            <i class="fa-solid my_cl_gr4y_3 fa-microphone fs-3"></i>
+                            <i class="fa-solid my_cl_gr4y_3 fa-microphone fs-3" role="button"></i>
                         </div>
                     </div>
                 </div> 
             </div>
-        </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
