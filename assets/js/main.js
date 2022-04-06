@@ -209,20 +209,27 @@ var app = new Vue (
                 //console.log(this.inputMs);
             },
             visibUser: function(){
+                this.contacts.forEach(
+                    (element, index, array) => {
+                        element.visible = false;
+                        console.log(element.visible);
+                    }
+                )
+                /*
                 for (let i = 0; i < this.contacts.length; i++ ){
                 this.contacts[i].visible = false; 
                 console.log(this.contacts[i].visible);   
                 }
-                this.contacts.forEach(
+                /*this.contacts.forEach(
                     (element, i) => {
                         this.arrayNames.push(element.name);
                         console.log(this.arrayNames[i]);
-                         if (this.inputSearchUser == this.arrayNames[i]){
+                         if ((this.arrayNames.includes(this.inputSearchUser)){
                         var userChat = document.getElementById('userChat');
                         userChat.classList.remove("d-none");
                          }
                         //console.log(this.arrayNames);
-                   });  //console.log(this.arrayNames);
+                   });  //console.log(this.arrayNames);*/
             },
         }
     }
