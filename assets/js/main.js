@@ -179,7 +179,9 @@ var app = new Vue (
             inputMs: '',
             outputMs: '',
             msgStatusInput: 'false',
-            chatbotReply: 'Ok!', 
+            chatbotReply: 'Ok!',
+            inputSearchUser: '',
+            arrayNames: [],
         },
         created(){
     
@@ -205,7 +207,23 @@ var app = new Vue (
                     }, 1000);
                 //console.log(this.yourMessage);
                 //console.log(this.inputMs);
-            }
+            },
+            visibUser: function(){
+                for (let i = 0; i < this.contacts.length; i++ ){
+                this.contacts[i].visible = false; 
+                console.log(this.contacts[i].visible);   
+                }
+                this.contacts.forEach(
+                    (element, i) => {
+                        this.arrayNames.push(element.name);
+                        console.log(this.arrayNames[i]);
+                         if (this.inputSearchUser == this.arrayNames[i]){
+                        var userChat = document.getElementById('userChat');
+                        userChat.classList.remove("d-none");
+                         }
+                        //console.log(this.arrayNames);
+                   });  //console.log(this.arrayNames);
+            },
         }
     }
 )

@@ -52,14 +52,14 @@
                     </div>
                     <div class="row justify-content-center align-items-center my_bg_gr4y"> 
                        <div class="input-group input-group-sm p-2">
-                            <span class="input-group-text bg-light px-3 border-0" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass my_cl_gr4y bg-light" role="button"></i></span>
-                            <input type="text" class="form-control border-0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
+                            <span class="input-group-text bg-light px-3 border-0" id="inputGroup-sizing-default" ><i class="fa-solid fa-magnifying-glass my_cl_gr4y bg-light" role="button"></i></span>
+                            <input type="text" class="form-control border-0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat" v-on:keyup="visibUser" v-on:keyup.enter="inputSearchUser"  v-model="inputSearchUser">
                         </div>                         
                     </div>
                     <!-- Notifiche -->
                     <div class="row border"> 
                             <ul class=" col ">
-                                <li class="row py-2 border-bottom bg-light " v-for=" (contact, index) in contacts" role="button" @click="changeContactsIndex(index)">
+                                <li class="row py-2 border-bottom bg-light " v-for=" (contact, index) in contacts" role="button" @click="changeContactsIndex(index)" :class="(contacts[index].visible == false) ? 'd-none' : ''" id="userChat">
                                     <div class="col-2 ">
                                         <img :src="`./assets/img/avatar${contact.avatar}.jpg`" class="my_profile rounded-circle" alt="`Chat person ${contacts.avatar}`"></div>    
                                     <div class="col-7">
